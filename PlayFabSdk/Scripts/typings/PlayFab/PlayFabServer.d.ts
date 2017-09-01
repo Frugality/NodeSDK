@@ -552,61 +552,6 @@
 
 declare module PlayFabServerModels {
     /**
-     / https://api.playfab.com/Documentation/Server/datatype/PlayFab.Server.Models/PlayFab.Server.Models.ActionsOnPlayersInSegmentTaskSummary
-     */
-    export interface ActionsOnPlayersInSegmentTaskSummary {
-        /**
-         / ID of the task instance.
-         */
-        TaskInstanceId?: string;
-        /**
-         / Identifier of the task this instance belongs to.
-         */
-        TaskIdentifier?: NameIdentifier;
-        /**
-         / UTC timestamp when the task started.
-         */
-        StartedAt: string;
-        /**
-         / UTC timestamp when the task completed.
-         */
-        CompletedAt?: string;
-        /**
-         / Current status of the task instance.
-         */
-        Status?: string;
-        /**
-         / Progress represented as percentage.
-         */
-        PercentComplete?: number;
-        /**
-         / Estimated time remaining in seconds.
-         */
-        EstimatedSecondsRemaining?: number;
-        /**
-         / If manually scheduled, ID of user who scheduled the task.
-         */
-        ScheduledByUserId?: string;
-        /**
-         / Error message for last processing attempt, if an error occured.
-         */
-        ErrorMessage?: string;
-        /**
-         / Flag indicating if the error was fatal, if false job will be retried.
-         */
-        ErrorWasFatal?: boolean;
-        /**
-         / Total players in segment when task was started.
-         */
-        TotalPlayersInSegment?: number;
-        /**
-         / Total number of players that have had the actions applied to.
-         */
-        TotalPlayersProcessed?: number;
-
-    }
-
-    /**
      / https://api.playfab.com/Documentation/Server/datatype/PlayFab.Server.Models/PlayFab.Server.Models.AdCampaignAttribution
      */
     export interface AdCampaignAttribution {
@@ -3609,15 +3554,6 @@ declare module PlayFabServerModels {
     }
 
     /**
-     / https://api.playfab.com/Documentation/Server/datatype/PlayFab.Server.Models/PlayFab.Server.Models.NameIdentifier
-     */
-    export interface NameIdentifier {
-        Name?: string;
-        Id?: string;
-
-    }
-
-    /**
      / https://api.playfab.com/Documentation/Server/datatype/PlayFab.Server.Models/PlayFab.Server.Models.NotifyMatchmakerPlayerLeftRequest
      */
     export interface NotifyMatchmakerPlayerLeftRequest extends PlayFabModule.IPlayFabRequestCommon {
@@ -4786,13 +4722,6 @@ declare module PlayFabServerModels {
         TagValue?: string;
 
     }
-
-    type TaskInstanceStatus = "Succeeded"
-        | "Starting"
-        | "InProgress"
-        | "Failed"
-        | "Aborted"
-        | "Pending";
 
     type TitleActivationStatus = "None"
         | "ActivatedTitleKey"

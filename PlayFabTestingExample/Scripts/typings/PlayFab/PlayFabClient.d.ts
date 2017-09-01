@@ -6193,6 +6193,10 @@ declare module PlayFabClientModels {
          / Boolean for whether this player is eligible for ad tracking.
          */
         NeedsAttribution: boolean;
+        /**
+         / Boolean for whether this player is eligible for gathering device info.
+         */
+        GatherDeviceInfo: boolean;
 
     }
 
